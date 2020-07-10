@@ -8,14 +8,6 @@
       @prevClick="callback"
       @nextClick="callback"
     >
-      <a-tab-pane key="publicmessage">
-        <span slot="tab">公告</span>
-        <public-message />
-      </a-tab-pane>
-      <a-tab-pane key="readmessage">
-        <span slot="tab">批阅</span>
-        <read-message />
-      </a-tab-pane>
       <a-tab-pane key="commentmessage">
         <span slot="tab">评论</span>
         <comment-message />
@@ -40,8 +32,6 @@
   </div>
 </template>
 <script>
-import PublicMessage from '@/views/user/remind/public-message'
-import ReadMessage from '@/views/user/remind/read-message'
 import CommentMessage from '@/views/user/remind/comment-message'
 import GoodMessage from '@/views/user/remind/good-message'
 import AnswerMessage from '@/views/user/remind/answer-message'
@@ -49,8 +39,6 @@ import CollectionMessage from '@/views/user/remind/collection-message'
 import PrivateMessage from '@/views/user/remind/private-message'
 export default {
   components: {
-    PublicMessage,
-    ReadMessage,
     CommentMessage,
     GoodMessage,
     AnswerMessage,

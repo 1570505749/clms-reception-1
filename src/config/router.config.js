@@ -50,7 +50,7 @@ export const constantRouterMap = [
     mate: {
       title: '报告',
       icon: 'book',
-      isLoading: true
+      isLoading: false
     }
   },
   {
@@ -70,7 +70,7 @@ export const constantRouterMap = [
     mate: {
       title: '班级',
       icon: 'usergroup-add',
-      isLoading: true
+      isLoading: false
     }
   },
   {
@@ -78,7 +78,7 @@ export const constantRouterMap = [
     name: 'Answer',
     component: Answer,
     mate: {
-      title: '答疑',
+      title: '论坛交流',
       icon: 'bulb',
       isLoading: true
     }
@@ -98,7 +98,7 @@ export const constantRouterMap = [
     name: 'Article',
     component: Article,
     mate: {
-      title: '文章',
+      title: '阅读中心',
       icon: 'book',
       isLoading: true
     }
@@ -149,7 +149,7 @@ export const constantRouterMap = [
     mate: {
       title: '任务',
       icon: 'sound',
-      isLoading: true
+      isLoading: false
     }
   },
   {
@@ -199,7 +199,7 @@ export const constantRouterMap = [
     mate: {
       title: '数据统计',
       icon: 'bar-chart',
-      isLoading: true
+      isLoading: false
     }
   },
   {
@@ -209,7 +209,7 @@ export const constantRouterMap = [
     mate: {
       title: '关于',
       icon: 'question-circle',
-      isLoading: true
+      isLoading: false
     }
   },
   {

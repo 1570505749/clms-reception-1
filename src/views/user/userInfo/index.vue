@@ -10,7 +10,7 @@
           <my-info style="position:absolute;width:160px;z-index:2;margin-left:10px;top: 230px;" />
           <div class="ProfileHeader-name">{{ userName }}</div>
           <div class="ProfileHeader-description">{{ userInfo.userDescription }}</div>
-          <a-button :style="{float:'right',marginRight:'10px',marginTop:'5px'}"> 编辑个人资料 </a-button>
+          <a-button :style="{float:'right',marginRight:'10px',marginTop:'5px'}" @click="showModal"> 编辑个人资料 </a-button>
         </a-layout-content>
       </a-layout>
       <a-layout :style="{width:'1100px',margin:'10px 0px'}">
@@ -62,6 +62,18 @@
         </a-layout-sider>
       </a-layout>
     </a-layout>
+    <!--    更新对话框-->
+    <a-modal
+      v-model="update"
+      :destroy-on-close="true"
+      style="top: 20px;"
+      width="800px"
+      title="编辑用户信息"
+      :footer="null"
+    ><update-user
+      @hide="hideModalReport"
+    />
+    </a-modal>
   </div>
 </template>
 <script>
@@ -71,9 +83,11 @@ import MyQuestion from '@/views/user/userInfo/myQuestion/index'
 import MyAnswer from '@/views/user/userInfo/myAnswer/index'
 import MyArticle from '@/views/user/userInfo/myArticle/index'
 import MyCollection from '@/views/user/userInfo/myCollection/index'
+import UpdateUser from './updateUser'
 import { mapGetters } from 'vuex'
 export default {
   components: {
+    UpdateUser,
     MyInfo,
     MyReport,
     MyAnswer,
@@ -83,6 +97,7 @@ export default {
   },
   data() {
     return {
+      update: false,
       mode: 'top'
     }
   },
@@ -92,6 +107,13 @@ export default {
     ])
   },
   methods: {
+    // 关闭更新框
+    hideModalReport() {
+      this.update = false
+    },
+    showModal() {
+      this.update = true
+    },
     callback(val) {
     }
   }

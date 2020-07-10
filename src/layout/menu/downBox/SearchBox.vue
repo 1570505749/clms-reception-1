@@ -6,7 +6,7 @@
     :dropdown-style="{ width: '200px' }"
     size="large"
     style="width: 200px"
-    placeholder="周报/日报/问答/文章/通知"
+    placeholder="请输入搜索内容"
     option-label-prop="value"
   >
     <a-input v-model="content">

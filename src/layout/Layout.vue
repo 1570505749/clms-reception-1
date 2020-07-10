@@ -2,11 +2,8 @@
   <a-layout id="components-layout-demo-fixed" class="layout">
     <a-back-top :visibility-height="100" />
     <a-layout-header :style="{height:'59px', background: '#001529', zIndex: 1, width: '100%' }">
-      <div class="logo">
-        <img src="../assets/ZYT1.png">
-      </div>
       <menu-login />
-      <simple-menu />
+      <simple-menu :style="{marginLeft:'13%'}" />
     </a-layout-header>
     <a-layout-content :style="{ background: '#F0F2F5', minHeight: '878px', width: '100%' }">
       <router-view />

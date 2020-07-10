@@ -1,18 +1,15 @@
 <template>
   <div class="search-container">
     <div class="search-icon">
-      <p class="font-icon">ZYT1-CLMS</p>
+      <p class="font-icon">搜索中心</p>
     </div>
-    <a-input-search v-model="keyword" size="large" class="search-box" placeholder="周报/日报/问答/文章/通知" enter-button style="width: 520px " @search="doSearch(keyword)" />
+    <a-input-search v-model="keyword" size="large" class="search-box" placeholder="请输入搜索内容" enter-button style="width: 520px " @search="doSearch(keyword)" />
     <!-- 条件列 -->
     <div class="scree-menu">
-      <a-menu v-model="current" mode="horizontal" :style="{ backgroundColor: 'black', color: 'white', border: 'none' }" @click="changeParams">
-        <a-menu-item key="report">报告</a-menu-item>
-        <a-menu-item key="question">提问</a-menu-item>
-        <a-menu-item key="answer">答复</a-menu-item>
-        <a-menu-item key="article">文章</a-menu-item>
-        <a-menu-item key="notic">通知</a-menu-item>
-        <a-menu-item key="othor">其他</a-menu-item>
+      <a-menu v-model="current" mode="horizontal" :style="{ color: 'black', border: 'none' }" @click="changeParams">
+        <a-menu-item key="question">相关问题</a-menu-item>
+        <a-menu-item key="answer">相关答复</a-menu-item>
+        <a-menu-item key="article">相似文章</a-menu-item>
       </a-menu>
     </div>
     <div class="search-content">
@@ -176,7 +173,7 @@ export default {
     align-items: center;
     /* 线性渐变 */
     /* background-image: linear-gradient(to right,#e8f1f1,#d2dde7); */
-    background: url(../../assets/img/search-back.jpg) no-repeat;
+    /*background: url(../../assets/img/search-back.jpg) no-repeat;*/
     background-size: 100% 100%;
     background-position: center;
   }
